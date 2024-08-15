@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+  </head>
+  <body>
+    <h1>Message Board</h1>
+    <ul>
+    <% for(let i=0;i<messages.length;i++){ %>
+      <li>
+        <p>User:<%= messages[i].user %>, Date:<%= messages[i].added %></p>
+        <p>Message: <%= messages[i].text %></p>
+        <a href=<%= `message/${i}` %>><button>Open Message</button></a>
+      </li>
+      <% } %>
+      </ul>
+    <a href="/new">Add New Message</a>
+  </body>
+</html>
