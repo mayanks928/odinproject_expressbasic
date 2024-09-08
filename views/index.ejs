@@ -10,9 +10,9 @@
     <ul>
     <% for(let i=0;i<messages.length;i++){ %>
       <li>
-        <p>User:<%= messages[i].user %>, Date:<%= messages[i].added %></p>
-        <p>Message: <%= messages[i].text %></p>
-        <a href=<%= `message/${i}` %>><button>Open Message</button></a>
+        <p>User:<%= messages[i].username %>, Date:<%= messages[i].datetime %></p>
+        <p>Message: <%= messages[i].message %></p>
+        <a href=<%= `message/${messages[i].id}` %>><button>Open Message</button></a>
       </li>
       <% } %>
       </ul>

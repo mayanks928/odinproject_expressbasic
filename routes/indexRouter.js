@@ -1,21 +1,7 @@
 const { Router } = require("express");
 const indexRouter = Router();
 const messages = require("../data");
-// const messages = [
-//   {
-//     text: "Hi there!",
-//     user: "Amando",
-//     added: new Date(),
-//   },
-//   {
-//     text: "Hello World!",
-//     user: "Charles",
-//     added: new Date(),
-//   },
-// ];
-
-indexRouter.get("/", (req, res) => {
-  res.render("index", { messages: messages });
-});
+const indexController = require("../controllers/indexController");
+indexRouter.get("/", indexController.getIndex);
 
 module.exports = indexRouter;
